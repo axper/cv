@@ -1,43 +1,54 @@
 \documentclass[a4paper,10pt]{article}
-\usepackage{url} % Formatting packages
-\usepackage{parskip} % Formatting packages
-\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
-\usepackage{titlesec} % Used to customize the \section command
-\usepackage{fullpage}
-\usepackage{textcomp}
+% Space around section titles
+\usepackage{parskip}
+% Required for specifying custom colors
+\usepackage{xcolor}
+% Used to customize the \section command
+\usepackage{titlesec}
+% Font
 \usepackage{tgpagella}
+% Space around 
 \usepackage[left=4.5cm, right=4.5cm, top=2cm, bottom=0cm]{geometry}
-\usepackage[colorlinks,
-            urlcolor=blue,
-            xetex,
-            pdfauthor={Babken Vardanyan},
-            pdftitle={Babken Vardanyan's CV},
-            pdfsubject={CV},
-            pdfkeywords={Impressive, you can strip pdf metadata!},
-            pdfproducer={Latex},
-            pdfcreator={xetex}]{hyperref} % Required for adding links and customizing them
+% Custom links
+\usepackage{hyperref}
 
-\setlength{\tabcolsep}{0.5em} % space length in tables
-\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
-\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
-\pagestyle{empty} % Removes page numbering
+% Space length in tables
+\setlength{\tabcolsep}{0.5em}
+% Set link colors throughout the document
+\hypersetup{colorlinks,
+			breaklinks,
+			urlcolor=linkcolour,
+			linkcolor=linkcolour,
+			pdfauthor={Babken Vardanyan},
+			pdftitle={Babken Vardanyan's CV},
+			pdfsubject={CV},
+			pdfkeywords={Impressive, you can strip pdf metadata!},
+			pdfproducer={Latex},
+			pdfcreator={xetex}}
+% Text formatting of sections
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+% Spacing around sections
+\titlespacing{\section}{0pt}{3pt}{3pt}
+% Removes page numbering
+\pagestyle{empty}
+% Link color
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+% Macro for URLs
+\newcommand{\site}[2]{{\color{blue}{\texttt{\href{#1} {#2}}}}}
 
 
 \begin{document}
 
 \par{\centering{\Huge Babken Vardanyan}\bigskip\par}
 
-%\section{Personal Data}
 \begin{tabular}{rl}
-\textsc{Place and Date of Birth:} & Yerevan, 22 April 1994 \\
-\textsc{Address:} & Yerevan, Zeytun \\%Dro 16/31 \\
+\textsc{Date of Birth:} & 22 April 1994 \\
+\textsc{Address:} & Yerevan, Zeytun \\
 \textsc{Phone:} & (077) 10-88-20 \\
-\textsc{Linkedin:} & {\color{blue}{\texttt{\href{https://www.linkedin.com/in/babkenvardanyan} {linkedin.com/in/babkenvardanyan}}}}\\
-\textsc{Stack Overflow:} & {\color{blue}{\texttt{\href{http://stackoverflow.com/users/2529583/babken-vardanyan} {stackoverflow.com/users/2529583}}}}\\
-\textsc{GitHub:} & {\color{blue}{\texttt{\href{https://github.com/axper} {github.com/axper}}}}\\
-\textsc{Email:} & \color{blue}{{\texttt{\href{mailto:babkenvardanyan94@gmail.com}{babkenvardanyan94@gmail.com}}}}
+\textsc{Linkedin:} & \site{https://www.linkedin.com/in/babkenvardanyan}{linkedin.com/in/babkenvardanyan}\\
+\textsc{Stack Overflow:} & \site{http://stackoverflow.com/users/2529583/babken-vardanyan}{stackoverflow.com/users/2529583}\\
+\textsc{GitHub:} & \site{https://github.com/axper}{github.com/axper}\\
+\textsc{Email:} & \site{mailto:babkenvardanyan94@gmail.com}{babkenvardanyan94@gmail.com}
 \end{tabular}
 
 \section{Education}
@@ -50,6 +61,8 @@
 
 \section{Programming \& Computer Skills}
 \begin{itemize}
+\item \textsc{Linux Tools \& Software}:\\
+	Bash, Zsh, Cron, Ssh, Sed, Grep, Wine, VMware, VirtualBox
 \item \textsc{Programming Languages}:\\
 	C, x86 Assembly, Unix Shell Scripting, Regex
 \item \textsc{Markup Languages}:\\
@@ -58,8 +71,6 @@
 	GCC, Clang, MinGW, Visual Studio, Nasm, Mono
 \item \textsc{Programming Tools}:\\
 	Git, Lint/SPlint, Valgrind, CMake, Makefile, Vim
-\item \textsc{Linux Tools \& Software}:\\
-	Bash, Zsh, Cron, Ssh, Wine, VMware, VirtualBox
 \end{itemize}
 
 \section{Projects}
@@ -67,9 +78,9 @@
 \item Small home network with Linux and Windows computers for file sharing (NFS, Samba)
 and testing web server functionality (Apache, Lighttpd)
 \item Contributions to Arch Linux wiki\\
-{\color{blue}{\texttt{\href{https://wiki.archlinux.org/index.php/Special:Contributions/Axper} {wiki.archlinux.org/index.php/Special:Contributions/Axper}}}}
+\site{https://wiki.archlinux.org/index.php/Special:Contributions/Axper}{wiki.archlinux.org/index.php/Special:Contributions/Axper}
 \item Win32 PE (.EXE) file obfuscator in C, my current diploma work\\
-{\color{blue}{\texttt{\href{https://github.com/axper/shuffle-pe-section-names} {github.com/axper/shuffle-pe-section-names}}}}
+\site{https://github.com/axper/shuffle-pe-section-names}{github.com/axper/shuffle-pe-section-names}
 \end{itemize}
 
 \section{Skills \& Abilities}
