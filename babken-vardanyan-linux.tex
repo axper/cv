@@ -8,12 +8,12 @@
 % Font
 \usepackage{tgpagella}
 % Space around 
-\usepackage[left=4.5cm, right=4.5cm, top=2cm, bottom=0cm]{geometry}
+\usepackage[left=4.5cm, right=4.5cm, top=2.5cm, bottom=0cm]{geometry}
 % Custom links
 \usepackage{hyperref}
+% For right-aligned table column
+\usepackage{array}
 
-% Space length in tables
-\setlength{\tabcolsep}{0.5em}
 % Set link colors throughout the document
 \hypersetup{colorlinks,
 			breaklinks,
@@ -25,6 +25,8 @@
 			pdfkeywords={Impressive, you can strip pdf metadata!},
 			pdfproducer={Latex},
 			pdfcreator={xetex}}
+% Space length in tables
+\setlength{\tabcolsep}{0.5em}
 % Text formatting of sections
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 % Spacing around sections
@@ -35,13 +37,15 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 % Macro for URLs
 \newcommand{\site}[2]{{\color{blue}{\texttt{\href{#1} {#2}}}}}
+% Right-aligned table column
+\newcolumntype{x}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
 
 
 \begin{document}
 
 \par{\centering{\Huge Babken Vardanyan}\bigskip\par}
 
-\begin{tabular}{rl}
+\begin{tabular}{x{100pt} l}
 \textsc{Date of Birth:} & 22 April 1994 \\
 \textsc{Address:} & Yerevan, Zeytun \\
 \textsc{Phone:} & (077) 10-88-20 \\
