@@ -1,0 +1,107 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{url} % Formatting packages
+\usepackage{parskip} % Formatting packages
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+\usepackage{titlesec} % Used to customize the \section command
+\usepackage{fullpage}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage[left=4.5cm, right=4.5cm, top=2cm, bottom=0cm]{geometry}
+\usepackage[colorlinks,
+            urlcolor=blue,
+            xetex,
+            pdfauthor={Babken Vardanyan},
+            pdftitle={Babken Vardanyan's CV},
+            pdfsubject={CV},
+            pdfkeywords={Impressive, you can strip pdf metadata!},
+            pdfproducer={Latex},
+            pdfcreator={xetex}]{hyperref} % Required for adding links and customizing them
+
+\setlength{\tabcolsep}{0.5em} % space length in tables
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+\pagestyle{empty} % Removes page numbering
+
+
+\begin{document}
+
+\par{\centering{\Huge Babken Vardanyan}\bigskip\par}
+
+%\section{Personal Data}
+\begin{tabular}{rl}
+\textsc{Place and Date of Birth:} & Yerevan, 22 April 1994 \\
+\textsc{Address:} & Yerevan, Zeytun \\%Dro 16/31 \\
+\textsc{Phone:} & (077) 10-88-20 \\
+%\textsc{Linkedin:} & {\color{blue}{\texttt{\href{http://lnkd.in/bdMU4-k} {lnkd.in/bdMU4-k}}}}\\
+\textsc{Linkedin:} & {\color{blue}{\texttt{\href{https://www.linkedin.com/in/babkenvardanyan} {linkedin.com/in/babkenvardanyan}}}}\\
+\textsc{Stack Overflow:} & {\color{blue}{\texttt{\href{http://stackoverflow.com/users/2529583/babken-vardanyan} {stackoverflow.com/users/2529583}}}}\\
+\textsc{GitHub:} & {\color{blue}{\texttt{\href{https://github.com/axper} {github.com/axper}}}}\\
+%\textsc{Facebook:} & \texttt{\href{https://www.facebook.com/babkenvardanyan94} {www.facebook.com/babkenvardanyan94}}\\
+\textsc{Email:} & \color{blue}{{\texttt{\href{mailto:babkenvardanyan94@gmail.com}{babkenvardanyan94@gmail.com}}}}
+\end{tabular}
+
+\section{Education}
+\begin{tabular}{r|l}
+\textit{Sep 2010 - Present} & \textsc{State Engineering University of Armenia}\\
+\textsc{Faculty}: & Computer Systems and Informatics\\
+\textsc{Chair}: & Information Security and Software\\
+\textsc{Average Grade}: & 98\\
+\multicolumn{2}{c}{} \\
+\textit{May 2014 - Present} & \textsc{C++ training}\\
+\textsc{Organizer}: &  Gyumri Information Technologies Center \& Zenta Ltd.\\
+\textsc{Location}: & Microsoft Innovation Center\\
+\end{tabular}
+
+\section{Programming \& Computer Skills}
+\begin{itemize}
+\item \textsc{Programming Languages}:\\
+	C, x86 Assembly, Unix Shell Scripting, Regex
+%\item \textsc{Libraries}:\\
+%	Qt (beginner), OpenGL (beginner)
+\item \textsc{Markup Languages}:\\
+	HTML, XML, \LaTeX, GitHub Markdown, Mediawiki
+\item \textsc{Compilers}:\\
+	GCC, Clang, MinGW, Visual Studio, Nasm, Mono
+\item \textsc{Programming Tools}:\\
+	Git, Lint/SPlint, Valgrind, CMake, Makefile, Vim
+\item \textsc{Linux Tools \& Software}:\\
+	Bash, Zsh, Cron, Ssh, Wine, VMware, VirtualBox
+\end{itemize}
+
+\section{Projects}
+\begin{itemize}
+\item Small home network with Linux and Windows computers for file sharing (NFS, Samba)
+and testing web server functionality (Apache, Lighttpd)
+%\item Text encryption program in C using AES-128 algorithm, with Qt/C++ GUI frontend\\
+%{\color{blue}\underline{\texttt{\href{https://github.com/axper/aes-gui} {github.com/axper/aes-gui}}}}
+\item Contributions to Arch Linux wiki\\
+{\color{blue}{\texttt{\href{https://wiki.archlinux.org/index.php/Special:Contributions/Axper} {wiki.archlinux.org/index.php/Special:Contributions/Axper}}}}
+\item Win32 PE (.EXE) file obfuscator in C, my current diploma work\\
+{\color{blue}{\texttt{\href{https://github.com/axper/shuffle-pe-section-names} {github.com/axper/shuffle-pe-section-names}}}}
+%\item A C++11 program which demonstrates the work of CPU schedulers\\
+%\texttt{\href{https://github.com/axper/scheduler} {github.com/axper/scheduler}}
+\end{itemize}
+
+\section{Skills \& Abilities}
+\begin{itemize}
+\item Comfortable with command line usage and config files
+\item Computer assembly and repair skills
+\item Ability to read man pages and software documentation
+\item Habit of making automated regular backups
+%\item Ability to ignore distractions and focus on task
+%\item Ability to quickly learn new technologies, programming languages and software
+\end{itemize}
+
+\section{Languages}
+\begin{tabular}{r l}
+\textsc{Armenian}: & Native\\
+\textsc{English}: & Excellent\\
+\textsc{Russian}: & Good
+\end{tabular}
+
+%\section{Interests}
+%Arch Linux, Computers, Open-Source, 3D Graphics, Reverse Engineering
+
+\end{document}
