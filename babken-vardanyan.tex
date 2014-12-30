@@ -8,7 +8,7 @@
 % Font
 \usepackage{tgpagella}
 % Space around
-\usepackage[left=4.2cm, right=4.2cm, top=1.4cm, bottom=0cm]{geometry}
+\usepackage[left=4.2cm, right=4.2cm, top=1.4cm, bottom=0.3cm]{geometry}
 % Custom links
 \usepackage{hyperref}
 % For right-aligned table column
@@ -39,6 +39,8 @@
 \newcommand{\site}[2]{{\color{blue}{\texttt{\href{#1} {#2}}}}}
 % Right-aligned table column
 \newcolumntype{x}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
+% Footnote without separator
+\renewcommand*\footnoterule{}
 
 
 \begin{document}
@@ -84,7 +86,7 @@
 \section{Administration \& Programming Skills}
 \begin{itemize}
 \item \textsc{Linux Tools \& Software}:\\
-	Bash, Zsh, Cron, Ssh, Sed, Grep, Wine, QEMU, VirtualBox, Metasploit, Nmap, tcpdump
+	systemd, Bash, Zsh, Cron, Ssh, Sed, Grep, Wine, QEMU, VirtualBox, Metasploit, Nmap, tcpdump
 \item \textsc{Windows Tools \& Software}:\\
 	Sysinternals Suite, Powershell, Visual Studio
 \item \textsc{Programming \& Markup Languages}:\\
@@ -108,5 +110,7 @@
 \textsc{English}: & Excellent\\
 \textsc{Russian}: & Good
 \end{tabular}
+
+\let\thefootnote\relax\footnote{source of this document available at \site{https://github.com/axper/cv}{github.com/axper/cv}}
 
 \end{document}
