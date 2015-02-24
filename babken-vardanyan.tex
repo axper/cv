@@ -13,6 +13,8 @@
 \usepackage{hyperref}
 % For right-aligned table column
 \usepackage{array}
+% For customizing itemize
+\usepackage{enumitem}
 
 % Set link colors throughout the document
 \hypersetup{colorlinks,
@@ -60,6 +62,20 @@
 \textit{Jul 2014 - Present} & \textsc{Unibank CJSC}\\
 \textsc{Department}: & Information Security\\
 \textsc{Position}: & IT Security Administrator\\
+\textsc{Responsibilities}: & {
+	\begin{minipage}[t]{\linewidth}
+		\begin{itemize}[leftmargin=*]
+		\item Pen Testing
+		\item Log Analysis
+		\item System Monitoring
+		\item Change Management
+		\item Network Security
+		\item Software Security Requirements
+		\item New Software Acceptance Testing
+		\end{itemize}
+	\end{minipage}
+}
+\\
 \end{tabular}
 
 \section{Education}
@@ -106,12 +122,12 @@
 \item Ability to read man pages and software documentation
 \end{itemize}
 
-%\section{Languages}
-%\begin{tabular}{r l}
-%\textsc{Armenian}: & Native\\
-%\textsc{English}: & Excellent\\
-%\textsc{Russian}: & Good
-%\end{tabular}
+\section{Languages}
+\begin{tabular}{r l}
+\textsc{Armenian}: & Native\\
+\textsc{English}: & Excellent\\
+\textsc{Russian}: & Good
+\end{tabular}
 
 \let\thefootnote\relax\footnote{newest version and source code of this document available at \site{https://github.com/axper/cv}{github.com/axper/cv}}
 
