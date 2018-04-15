@@ -6,19 +6,9 @@
 % Used to customize the \section command
 \usepackage{titlesec}
 % Font
-%\usepackage{tgtermes}
-%\usepackage{tgadventor}
-%\usepackage{tgbonum}
-%\usepackage{tgchorus}
-%\usepackage{tgcursor}
-%\usepackage{tgheros}
-%\usepackage{tgpagella}
-%\usepackage{tgschola}
-%\usepackage{tgtermes}
 \usepackage{fontspec}
 \setmainfont[Ligatures=TeX]{Roboto}
-%\usepackage[default,osfigures,scale=0.95]{Arial}
-% Space around
+% Space around the page
 \usepackage[left=1.9cm, right=1.9cm, top=1.85cm, bottom=1.0cm]{geometry}
 % Custom links
 \usepackage{hyperref}
@@ -52,10 +42,6 @@
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 % Macro for URLs
 \newcommand{\site}[2]{{\color{blue}{\texttt{\href{#1} {#2}}}}}
-% Right-aligned table column
-\newcolumntype{x}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
-% Footnote without separator
-\renewcommand*\footnoterule{}
 
 
 \begin{document}
@@ -63,14 +49,19 @@
 \par{\centering{\Huge Babken Vardanyan}\bigskip\par}
 \par{\centering{\Large Python Developer}\bigskip\par}
 
-\begin{tabular}{r l r}
-\textsc{Address:} & Dro 16, Yerevan, Armenia & \hspace{73pt} \multirow{6}{*}{\includegraphics[height=72pt]{picture.jpg}} \\
-\textsc{Email:} & \site{mailto:babkenvardanyan94@gmail.com}{babkenvardanyan94@gmail.com} & \\
-\textsc{Phone:} & \texttt{+374 98 399434} & \\
-\textsc{Linkedin:} & \site{https://www.linkedin.com/in/babkenvardanyan}{linkedin.com/in/babkenvardanyan} & \\
-\textsc{GitHub:} & \site{https://github.com/axper}{github.com/axper} & \\
-\textsc{StackOverflow} & \site{https://stackoverflow.com/users/2529583/babken-vardanyan}{stackoverflow.com/users/2529583} & \\
-\end{tabular}
+\begin{minipage}[t]{0.7\textwidth}
+	\begin{tabular}{r l}
+		\textsc{Address:} & Dro 16, Yerevan, Armenia \\
+		\textsc{Email:} & \site{mailto:babkenvardanyan94@gmail.com}{babkenvardanyan94@gmail.com} \\
+		\textsc{Phone:} & \texttt{+374 98 399434} \\
+		\textsc{Linkedin:} & \site{https://www.linkedin.com/in/babkenvardanyan}{linkedin.com/in/babkenvardanyan} \\
+		\textsc{GitHub:} & \site{https://github.com/axper}{github.com/axper} \\
+		\textsc{StackOverflow} & \site{https://stackoverflow.com/users/2529583/babken-vardanyan}{stackoverflow.com/users/2529583} \\
+	\end{tabular}
+\end{minipage}
+\begin{minipage}[c]{0.3\textwidth}
+	\includegraphics[height=75pt]{picture.jpg}
+\end{minipage}
 
 
 \section{Profile}
