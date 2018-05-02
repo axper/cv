@@ -90,3 +90,17 @@ sympy-plots-for-*.tex/
 
 # intellij idea
 .idea
+
+# Custom
+secret
+
+# Custom - Latex
+*.4ct
+*.4tc
+*.css
+*.html
+*.idv
+*.lg
+*.tmp
+*.xdv
+*.xref

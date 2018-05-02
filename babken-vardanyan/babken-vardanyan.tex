@@ -6,15 +6,20 @@
 % Used to customize the \section command
 \usepackage{titlesec}
 % Font
-\usepackage{tgpagella}
-% Space around
-\usepackage[left=4.4cm, right=4.4cm, top=3.4cm, bottom=3.4cm]{geometry}
+\usepackage{fontspec}
+\setmainfont[Ligatures=TeX]{Roboto}
+% Space around the page
+\usepackage[left=1.9cm, right=1.9cm, top=1.3cm, bottom=1.0cm]{geometry}
 % Custom links
 \usepackage{hyperref}
 % For right-aligned table column
 \usepackage{array}
 % For customizing itemize
 \usepackage{enumitem}
+% For including headshot picture
+\usepackage{graphicx}
+% For headshot picture positioning in table
+\usepackage{multirow}
 
 % Set link colors throughout the document
 \hypersetup{colorlinks,
@@ -30,151 +35,97 @@
 % Text formatting of sections
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 % Spacing around sections
-\titlespacing{\section}{0pt}{2.3pt}{2.3pt}
+\titlespacing{\section}{0pt}{1.5pt}{1.5pt}
 % Removes page numbering
-%\pagestyle{empty}
+\pagestyle{empty}
 % Link color
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
 % Macro for URLs
 \newcommand{\site}[2]{{\color{blue}{\texttt{\href{#1} {#2}}}}}
-% Right-aligned table column
-\newcolumntype{x}[1]{>{\raggedleft\hspace{0pt}}p{#1}}
-% Footnote without separator
-\renewcommand*\footnoterule{}
 
 
 \begin{document}
 
 \par{\centering{\Huge Babken Vardanyan}\bigskip\par}
+\par{\centering{\Large Python Developer}\bigskip\par}
 
-\begin{tabular}{x{105pt} l}
-\textsc{Date of Birth:} & April 1994 \\
-\textsc{City:} & Yerevan, Armenia \\
-\textsc{Phone:} & (+374 98) 39-94-34 \\
-\textsc{Website:} & \site{https://lazydevelo.com}{lazydevelo.com}\\
-\textsc{GitHub:} & \site{https://github.com/axper}{github.com/axper}\\
-\textsc{Stack Overflow:} & \site{https://stackoverflow.com/users/2529583/babken-vardanyan}{stackoverflow.com/users/2529583}\\
-\textsc{Linkedin:} & \site{https://www.linkedin.com/in/babkenvardanyan}{linkedin.com/in/babkenvardanyan}\\
-\textsc{Email:} & \site{mailto:babken@lazydevelo.com}{babken@lazydevelo.com}
-\end{tabular}
+\begin{minipage}[t]{0.7\textwidth}
+	\begin{tabular}{r l}
+		\textsc{Address:} & Dro 16, Yerevan, Armenia \\
+		\textsc{Email:} & \site{mailto:babkenvardanyan94@gmail.com}{babkenvardanyan94@gmail.com} \\
+		\textsc{Phone:} & \texttt{+374 98 399434} \\
+		\textsc{Linkedin:} & \site{https://www.linkedin.com/in/babkenvardanyan}{linkedin.com/in/babkenvardanyan} \\
+		\textsc{GitHub:} & \site{https://github.com/axper}{github.com/axper} \\
+		\textsc{StackOverflow} & \site{https://stackoverflow.com/users/2529583/babken-vardanyan}{stackoverflow.com/users/2529583} \\
+	\end{tabular}
+\end{minipage}
+\begin{minipage}[c]{0.3\textwidth}
+	\includegraphics[height=75pt]{picture.jpg}
+\end{minipage}
 
-\section{Work Experience}
-\begin{tabular}{x{105pt} p{200pt}}
-	\textit{Sep 2017 - Present} & \textsc{Overpass}\\
-	\textsc{Position}: & Senior Developer\\
-	\textsc{Projects}: & {
-		\begin{minipage}[t]{\linewidth}
-			\begin{itemize}[leftmargin=*]
-				\item Overpass Lead Capture: \site{https://app.getoverpass.com}{getoverpass.com}
-			\end{itemize}
-		\end{minipage}
-	}\\
-	\\
-	\textit{Sep 2017 - Present} & \textsc{Basic IT Center}\\
-	\textsc{Position}: & Programming Instructor\\
-	\\
-	\textit{May 2015 - June 2017} & \textsc{SFL LLC}\\
-	\textsc{Position}: & Java Backend Developer\\
-	\textsc{Projects}: & {
-		\begin{minipage}[t]{\linewidth}
-			\begin{itemize}[leftmargin=*]
-				\item CallMonkey: \site{https://callmonkey.com}{callmonkey.com}
-				\item Border Management Information System
-			\end{itemize}
-		\end{minipage}
-	}\\
-	\\
-	\textit{Jul 2014 - May 2015} & \textsc{Unibank CJSC}\\
-	\textsc{Department}: & Information Security\\
-	\textsc{Position}: & IT Security Administrator\\
-%	\textsc{Responsibilities}: & {
-%		\begin{minipage}[t]{\linewidth}
-%			\begin{itemize}[leftmargin=*]
-%				\item Pen Testing
-%				\item Log Analysis
-%				\item System Monitoring
-%				\item Change Management
-%				\item Network Security
-%				\item Software Security Requirements
-%				\item New Software Acceptance Testing
-%			\end{itemize}
-%		\end{minipage}
-%	}\\
-\end{tabular}
+
+\section{Profile}
+
+Python and Django developer with strong focus on delivery, stability and maintainability.
+Proven track record of getting things done on time.
+Effective and regular communication.
+Knowledge of mulitple programming languages and frameworks.
+Knowledge of server, database administration and information security.
+I love to teach newcomers.
+I adapt to new technologies quickly.
+I love to tackle challenging technical problems.
+I write docs and always test the code before pushing.
+
+
+\section{Main Skills}
+
+\begin{itemize}
+\item \textsc{Python}: Django, REST Framework
+\item \textsc{Java}: Android, Spring Framework, Hibernate, Junit, Mockito, Jersey
+\item \textsc{Linux}: Bash, SystemD, Ansible, NginX, SSH, Docker, Kubernetes, VMWare
+\item \textsc{Database}: SQL, Elasticsearch, MongoDB, SQLite
+%\item \textsc{Editor}: Vim
+\item \textsc{Other}: Selenium/Appium, iOS, Sonar, Nmap, Tcpdump, C, Powershell
+\end{itemize}
+
+
+\section{Work History}
+
+\begin{itemize}
+\item Overpass, \textbf{Lead Developer}, \site{https://app.getoverpass.com}{app.getoverpass.com} (Sep 2017 - Present)
+\item Basic IT Center, \textbf{Programming Instructor}, \site{https://it-center.am}{it-center.am} (Sep 2017 - Present)
+\item SFL LLC, \textbf{Java Developer}, \site{https://callmonkey.com}{callmonkey.com} (May 2015 - June 2017)
+\item Unibank CJSC, \textbf{Security Administrator}, \site{http://unibank.am}{unibank.am} (May 2014 - May 2015)
+\end{itemize}
+
+
+\section{Professional Experience}
+
+\begin{itemize}
+\item Lead developer of Overpass, a lead capture app with Android, iOS, Django, Web codebases. Learned \mbox{Android} and iOS in just 1 week. Increased unit test coverage from 0 to 90\%:\\
+	\site{https://app.getoverpass.com}{https://app.getoverpass.com}
+\item Breaking down a monolith web app into microservices, complete rewrite from ground up with Java, Spring, MongoDB and Elasticsearch:\\
+	\site{https://callmonkey.com}{https://callmonkey.com}
+\item Development of distributed border security system for the Armenian Government:\\
+	\site{https://sflpro.com/portfolio/2-5-million-border-checks-in-2015/}{https://sflpro.com/portfolio/2-5-million-border-checks-in-2015/}
+\item Created a recipe sharing webside in under 48 hours during a hackathon:\\
+	\site{https://hamegh.com}{https://hamegh.com}
+\item Contributions to Open Source Documentation during spare time:\\
+	\site{https://wiki.archlinux.org/index.php/Special:Contributions/Axper}{https://wiki.archlinux.org/index.php/Special:Contributions/Axper}
+\end{itemize}
+
 
 \section{Education}
-\begin{tabular}{x{105pt} l}
-\textit{Sep 2014 - May 2016} & \textsc{National Academy of Sciences of Armenia}\\
-\textsc{Faculty}: & Informatics and Computer Engineering\\
-%\textsc{GPA}: & 15.32/20.0\\
-\\
-\textit{Sep 2010 - May 2014} & \textsc{State Engineering University of Armenia}\\
-\textsc{Faculty}: & Computer Systems and Informatics\\
-\textsc{Speciality}: & Information Security\\
-%\textsc{GPA}: & 95.57/100.0 (3.92)\\
-\end{tabular}
 
-\section{Projects}
 \begin{itemize}
-\item Hamegh: Recipe Sharing Website, made during Garage48 Hackathon\\
-\site{https://hamegh.com}{https://hamegh.com}
-\item Overpass: Lead Capture App\\
-\site{https://app.getoverpass.com}{https://app.getoverpass.com}
-\item CallMonkey: Outbound Plug \& Play B2B Call Center Software\\
-\site{https://callmonkey.com}{https://callmonkey.com}
-\item Bayazet: Border Management Information System\\
-\site{https://sflpro.com/?portfolio=2-5-million-border-checks-in-2015}{https://sflpro.com/?portfolio=2-5-million-border-checks-in-2015}
-\item Contributions to Arch Linux wiki\\
-\site{https://wiki.archlinux.org/index.php/Special:Contributions/Axper}{https://wiki.archlinux.org/index.php/Special:Contributions/Axper}
-%\item Various github projects\\
-%\site{https://github.com/axper}{https://github.com/axper}
+\item Master of Engineering, Informatics and Computer Engineering, National Academy of Sciences of Armenia
+\item Bachelor of Technology, Computer Systems and Informatics, State Engineering University of Armenia
 \end{itemize}
 
-\section{Skills}
-\begin{itemize}
-\item \textsc{Languages}:\\
-	Java, Python, C, Unix Shell (Bash), SQL, Powershell, Regex, x86 Assembly
-\item \textsc{Frameworks \& Libraries}:\\
-	Django, Spring Framework, Hibernate, Jersey
-\item \textsc{UI Frameworks}:\\
-	Uikit, Google Web Toolkit
-\item \textsc{Web Servers}:\\
-	Apache, NginX, Tomcat, Jetty, Gunicorn
-\item \textsc{Testing Frameworks}:\\
-	Selenium, Appium, Mockito, EasyMock, JUnit
-\item \textsc{Databases}:\\
-	Elasticsearch, MongoDB, SQLite, MySQL, Oracle DB
-\item \textsc{APIs}:\\
-	PayPal API, LinkedIn/Google/Facebook social authentication, Amazon S3
-\item \textsc{Compilers}:\\
-	javac, GCC, Clang, MinGW, Nasm, Mono
-\item \textsc{Code Static \& Dynamic Analysis}:\\
-	Sonar, SPlint/Lint, Pylint, Valgrind
-\item \textsc{Build Systems}:\\
-	Bamboo, Maven, Makefile, CMake
-\item \textsc{Version Control}:\\
-	Git, GitHub, Bitbucket
-\item \textsc{IDEs \& Text Editors}:\\
-	Vim, IntelliJ IDEA, PyCharm, Android Studio, Visual Studio
-\item \textsc{Markup Languages}:\\
-	\LaTeX, Mediawiki, HTML/CSS, XML, GitHub Markdown, Groff
-\item \textsc{Linux Tools}:\\
-	Elasticsearch/Logstash/Kibana server (ELK Stack), Ansible, Supervisor, Zsh, SSH, APT, yum, systemd, initscripts, iproute2, Cron, Sed, Grep
-\item \textsc{Security \& Networking Tools}:\\
-	Nmap, Metasploit, ss/netstat, tcpdump, Rsyslog, sqlmap
-\item \textsc{Containerization, Virtualization \& Compatibility Layers}:\\
-	Kubernetes, Docker, VirtualBox, QEMU, Android Emulator, Wine
-\end{itemize}
 
 \section{Languages}
-\begin{tabular}{r l}
-\textsc{Armenian}: & Native\\
-\textsc{English}: & Excellent (TOEFL score: 109/120)\\
-\textsc{Russian}: & Good\\
-\textsc{German}: & Beginner\\
-\textsc{Georgian}: & Beginner
-\end{tabular}
 
-\let\thefootnote\relax\footnote{newest version and source code of this document available at \site{https://github.com/axper/cv}{github.com/axper/cv}}
+Armenian (Native), English (Excellent), Russian (Excellent), German (Written only), Georgian (Beginner)
+
 
 \end{document}
