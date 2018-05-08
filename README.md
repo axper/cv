@@ -3,10 +3,4 @@ cv
 Babken Vardanyan's CV in LaTeX
 Compiling
 ==
-To compile the files to PDF, install TeX Live binaries (`texlive-bin` for Arch Linux), and run:
-
-    pdflatex *.tex
-
-or alternatively:
-
-    xelatex *.tex
+To compile the files to PDF, install `texlive-bin` and `fontawesome.sty` (from AUR), and run `compile.sh`.
